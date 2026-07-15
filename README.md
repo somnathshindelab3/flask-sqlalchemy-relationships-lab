@@ -23,6 +23,10 @@ You'll follow the problem-solving steps you’ve learned:
 * Refine your code to ensure proper cascading and querying behaviors.
 
 
+## Current Status
+
+This lab now includes Flask-SQLAlchemy models for events, sessions, speakers, and bios with the expected one-to-many, one-to-one, and many-to-many relationships. The app exposes JSON endpoints for listing events, fetching event sessions, viewing speakers with bios, and listing session speakers.
+
 ## Tools & Resources
 
 - [GitHub Repo](https://github.com/learn-co-curriculum/flask-sqlalchemy-relationships-lab)

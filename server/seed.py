@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 
+import os
+
 from app import app
 from models import db, Event, Session, Speaker, Bio
 import datetime
+
+app.config["SQLALCHEMY_DATABASE_URI"] = f"sqlite:///{os.path.join(app.instance_path, 'app.db')}"
 
 with app.app_context():
     # Clear all table data
@@ -47,4 +51,4 @@ with app.app_context():
     session3.speakers.append(speaker2)
     db.session.commit()
 
-    print("🌱 Database seeded successfully!")
+    print("Database seeded successfully!")
